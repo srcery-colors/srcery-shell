@@ -1,0 +1,44 @@
+" vim:ft=vifm:ts=2:sw=2:fdm=marker
+
+" This is Srcery Vifm color scheme for terminals that support 256 colors.
+"
+" This file last updated:  September, 2020
+
+highlight clear
+
+hi Win         cterm=none         ctermfg=white   ctermbg=none
+hi OtherWin    cterm=none         ctermfg=default ctermbg=default
+hi AuxWin      cterm=none         ctermfg=default ctermbg=233
+hi OddLine     ctermfg=default    ctermbg=default
+
+hi TopLine     cterm=none         ctermfg=white   ctermbg=236
+hi TopLineSel  cterm=none         ctermfg=yellow  ctermbg=236
+
+hi TabLine     cterm=none         ctermfg=8       ctermbg=none
+hi TabLineSel  cterm=none         ctermfg=15      ctermbg=236
+
+hi JobLine     cterm=bold         ctermfg=15      ctermbg=236
+hi StatusLine  cterm=none         ctermfg=15      ctermbg=236
+hi Border      cterm=none         ctermfg=15      ctermbg=236
+
+hi CurrLine    cterm=bold         ctermfg=none    ctermbg=236
+hi OtherLine   cterm=none         ctermfg=none    ctermbg=236
+hi LineNr      cterm=none         ctermfg=8       ctermbg=none
+
+hi Selected    cterm=bold,reverse ctermfg=none    ctermbg=none
+hi CmpMismatch cterm=bold         ctermfg=red     ctermbg=none
+
+hi SuggestBox  cterm=none         ctermfg=15      ctermbg=none
+hi WildMenu    cterm=bold         ctermfg=15      ctermbg=blue
+
+hi CmdLine     cterm=none         ctermfg=white   ctermbg=none
+hi ErrorMsg    cterm=none         ctermfg=15      ctermbg=red
+
+hi Directory   cterm=none         ctermfg=blue    ctermbg=none
+hi Executable  cterm=none         ctermfg=green   ctermbg=none
+hi Socket      cterm=none         ctermfg=magenta ctermbg=none
+hi Device      cterm=none         ctermfg=red     ctermbg=none
+hi Fifo        cterm=none         ctermfg=yellow  ctermbg=none
+hi Link        cterm=none         ctermfg=cyan    ctermbg=none
+hi BrokenLink  cterm=none         ctermfg=red     ctermbg=none
+hi HardLink    cterm=bold         ctermfg=cyan    ctermbg=none
