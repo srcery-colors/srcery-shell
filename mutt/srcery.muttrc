@@ -1,0 +1,17 @@
+###############################################################################
+# Srcery Theme for Mutt, adapted from: https://draculatheme.com/
+# Author: https://github.com/Charsinic
+#
+# Note! Add this to your muttrc file.
+#
+# general ------------ foreground ---- background -----------------------------
+color indicator         color9          color237
+color status            color15         color235
+
+# message index ------ foreground ---- background -----------------------------
+color index             color8          default         ~D # deleted messages
+color index             color1          default         ~F # flagged messages
+color index             color11         default         ~N # new messages
+color index             color10         default         ~Q # messages which have been replied to
+color index             color5          default         ~T # tagged messages
+color index             color6          default         ~v # messages part of a collapsed thread
