@@ -1,0 +1,17 @@
+// Srcery colorscheme: https://srcery-colors.github.io/
+
+themes {
+    srcery {
+        fg 252 232 195
+        bg 28 27 25
+        red 239 47 39
+        green 81 159 80
+        yellow 251 184 41
+        blue 44 120 191
+        magenta 224 44 109
+        orange 255 95 0
+        cyan 10 174 179
+        black 28 27 25
+        white 252 232 195
+    }
+}
