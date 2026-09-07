@@ -1,5 +1,7 @@
 # Starship theme
 
+![Generic preview of the Srcery Starship theme](./screenshot.png)
+
 Copy `starship.toml` to Starship's default configuration path:
 
 ```sh
