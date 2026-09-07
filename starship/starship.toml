@@ -8,8 +8,9 @@ add_newline = false
 command_timeout = 500
 palette = 'srcery'
 
-# A compact two-line prompt with Srcery's dark, earthy status-bar colors.
-format = '[](fg:srcery_orange)$username$hostname[](fg:srcery_orange bg:srcery_gray2)$directory[](fg:srcery_gray2 bg:srcery_gray3)$git_branch$git_status$python$nodejs$rust$package[](fg:srcery_gray3)$line_break$character'
+# A compact two-line prompt using Srcery's neutral status-bar segments.
+# Orange remains a small signature accent instead of the primary background.
+format = '[](fg:srcery_gray4)$username$hostname[](fg:srcery_gray4)$directory[](fg:srcery_black bg:srcery_gray2)$git_branch$git_status$python$nodejs$rust$package[](fg:srcery_gray2)$line_break$character'
 right_format = '$cmd_duration$status$jobs'
 
 [palettes.srcery]
@@ -45,56 +46,56 @@ srcery_gray5 = '#45433e'
 srcery_gray6 = '#504d47'
 
 [username]
-show_always = true
+show_always = false
 format = '[ $user ]($style)'
-style_user = 'fg:srcery_black bg:srcery_orange bold'
+style_user = 'fg:srcery_bright_white bg:srcery_gray4 bold'
 
 [hostname]
-ssh_only = false
+ssh_only = true
 format = '[@$hostname ]($style)'
-style = 'fg:srcery_black bg:srcery_orange bold'
+style = 'fg:srcery_bright_white bg:srcery_gray4 bold'
 
 [directory]
-format = '[ $path ]($style)'
-style = 'fg:srcery_bright_white bg:srcery_gray2 bold'
+format = '[$path ]($style)'
+style = 'fg:srcery_bright_blue bold'
 truncation_length = 3
 truncation_symbol = '…/'
 read_only = ' '
-read_only_style = 'fg:srcery_bright_red bg:srcery_gray2'
+read_only_style = 'fg:srcery_bright_red'
 
 [git_branch]
 symbol = ' '
 format = '[$symbol$branch]($style)'
-style = 'fg:srcery_yellow bg:srcery_gray3 bold'
+style = 'fg:srcery_bright_yellow bg:srcery_gray2 bold'
 
 [git_status]
 format = '([$all_status$ahead_behind]($style))'
-style = 'fg:srcery_bright_orange bg:srcery_gray3 bold'
+style = 'fg:srcery_orange bg:srcery_gray2 bold'
 
 [python]
 symbol = ' '
 format = '[$symbol$version]($style)'
-style = 'fg:srcery_bright_blue bg:srcery_gray3'
+style = 'fg:srcery_bright_blue bg:srcery_gray2'
 
 [nodejs]
 symbol = ' '
 format = '[$symbol$version]($style)'
-style = 'fg:srcery_bright_green bg:srcery_gray3'
+style = 'fg:srcery_bright_green bg:srcery_gray2'
 
 [rust]
 symbol = ' '
 format = '[$symbol$version]($style)'
-style = 'fg:srcery_bright_red bg:srcery_gray3'
+style = 'fg:srcery_bright_red bg:srcery_gray2'
 
 [package]
 symbol = '󰏗 '
 format = '[$symbol$version]($style)'
-style = 'fg:srcery_bright_magenta bg:srcery_gray3'
+style = 'fg:srcery_bright_magenta bg:srcery_gray2'
 
 [cmd_duration]
 min_time = 2_000
 format = '[ $duration ]($style)'
-style = 'fg:srcery_bright_orange bold'
+style = 'fg:srcery_yellow bold'
 
 [status]
 disabled = false
