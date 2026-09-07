@@ -1,0 +1,111 @@
+# Srcery theme for Starship
+# Palette based on srcery-colors/srcery-vim and srcery-colors/srcery-shell:
+# https://github.com/srcery-colors/srcery-shell
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+command_timeout = 500
+palette = 'srcery'
+
+# A compact two-line prompt with Srcery's dark, earthy status-bar colors.
+format = '[](fg:srcery_orange)$username$hostname[](fg:srcery_orange bg:srcery_gray2)$directory[](fg:srcery_gray2 bg:srcery_gray3)$git_branch$git_status$python$nodejs$rust$package[](fg:srcery_gray3)$line_break$character'
+right_format = '$cmd_duration$status$jobs'
+
+[palettes.srcery]
+srcery_black = '#121110'
+srcery_red = '#EF2F27'
+srcery_green = '#519F50'
+srcery_yellow = '#FBB829'
+srcery_blue = '#2C78BF'
+srcery_magenta = '#E02C6D'
+srcery_cyan = '#0AAEB3'
+srcery_white = '#C5B088'
+srcery_bright_black = '#917E6B'
+srcery_bright_red = '#F75341'
+srcery_bright_green = '#98BC37'
+srcery_bright_yellow = '#FED06E'
+srcery_bright_blue = '#68A8E4'
+srcery_bright_magenta = '#FF5C8F'
+srcery_bright_cyan = '#2BE4D0'
+srcery_bright_white = '#FCE8C3'
+srcery_dark_red = '#4F2321'
+srcery_dark_green = '#294229'
+srcery_dim_green = '#2E5C2E'
+srcery_dark_blue = '#1E5181'
+srcery_orange = '#FF5F00'
+srcery_bright_orange = '#FF8700'
+srcery_teal = '#008080'
+srcery_hard_black = '#121212'
+srcery_gray1 = '#1c1b19'
+srcery_gray2 = '#262522'
+srcery_gray3 = '#312f2c'
+srcery_gray4 = '#3b3935'
+srcery_gray5 = '#45433e'
+srcery_gray6 = '#504d47'
+
+[username]
+show_always = true
+format = '[ $user ]($style)'
+style_user = 'fg:srcery_black bg:srcery_orange bold'
+
+[hostname]
+ssh_only = false
+format = '[@$hostname ]($style)'
+style = 'fg:srcery_black bg:srcery_orange bold'
+
+[directory]
+format = '[ $path ]($style)'
+style = 'fg:srcery_bright_white bg:srcery_gray2 bold'
+truncation_length = 3
+truncation_symbol = '…/'
+read_only = ' '
+read_only_style = 'fg:srcery_bright_red bg:srcery_gray2'
+
+[git_branch]
+symbol = ' '
+format = '[$symbol$branch]($style)'
+style = 'fg:srcery_yellow bg:srcery_gray3 bold'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
+style = 'fg:srcery_bright_orange bg:srcery_gray3 bold'
+
+[python]
+symbol = ' '
+format = '[$symbol$version]($style)'
+style = 'fg:srcery_bright_blue bg:srcery_gray3'
+
+[nodejs]
+symbol = ' '
+format = '[$symbol$version]($style)'
+style = 'fg:srcery_bright_green bg:srcery_gray3'
+
+[rust]
+symbol = ' '
+format = '[$symbol$version]($style)'
+style = 'fg:srcery_bright_red bg:srcery_gray3'
+
+[package]
+symbol = '󰏗 '
+format = '[$symbol$version]($style)'
+style = 'fg:srcery_bright_magenta bg:srcery_gray3'
+
+[cmd_duration]
+min_time = 2_000
+format = '[ $duration ]($style)'
+style = 'fg:srcery_bright_orange bold'
+
+[status]
+disabled = false
+format = '[ ✘ $status ]($style)'
+style = 'fg:srcery_bright_red bold'
+
+[jobs]
+format = '[ ⚙ $number ]($style)'
+style = 'fg:srcery_bright_cyan bold'
+
+[character]
+success_symbol = '[❯](bold fg:srcery_orange)'
+error_symbol = '[✗](bold fg:srcery_red)'
+vimcmd_symbol = '[❮](bold fg:srcery_blue)'
