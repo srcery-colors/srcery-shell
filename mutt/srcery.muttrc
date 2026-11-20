@@ -1,5 +1,6 @@
 ###############################################################################
 # Srcery Theme for Mutt, adapted from: https://draculatheme.com/
+# Dracula portions: MIT License, see LICENSE-dracula in this folder.
 # Author: https://github.com/Charsinic
 #
 # Note! Add this to your muttrc file.
